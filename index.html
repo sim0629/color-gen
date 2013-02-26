@@ -9,6 +9,23 @@
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
     <title>Color Generator</title>
+    <script src="https://github.com/sim0629/color-gen/raw/master/color-gen.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+    <!--
+      var colorGen = new ColorGenerator();
+      var n = -1;
+      $(function() {
+        $("#add-button").click(function() {
+          n += 1;
+          var color = colorGen.FromInt(n);
+          var $li = $("<li />");
+          $li.css("background-color", color).html(n + " : " + color);
+          $("#color-list").prepend($li);
+        });
+      });
+    //-->
+    </script>
   </head>
 
   <body>
@@ -31,6 +48,11 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
+        <h3>Test</h3>
+        <button id="add-button">Add</button>
+        <ul id="color-list">
+        </ul>
+
         <h3>Welcome to GitHub Pages.</h3>
 
 <p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
