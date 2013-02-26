@@ -3,8 +3,8 @@
 var ColorGenerator = function() {
     var self = this;
 
-    this.saturation = 1;
-    this.value = 1;
+    this.saturation = 0.8;
+    this.value = 0.95;
 
     var getHueFromInt = function(n) {
         var hue = 0;
