@@ -3,7 +3,7 @@
 var ColorGenerator = function() {
     var self = this;
 
-    this.base = 2;
+    this.base = 3;
     this.saturation = 0.8;
     this.value = 0.95;
 
