@@ -3,16 +3,18 @@
 var ColorGenerator = function() {
     var self = this;
 
+    this.base = 2;
     this.saturation = 0.8;
     this.value = 0.95;
 
     var getHueFromInt = function(n) {
+        var base = self.base;
         var hue = 0;
         var v = 1;
         while(n > 0) {
-            v = v / 2;
-            if(n % 2 == 1) hue = hue + v;
-            n = parseInt(n / 2);
+            v = v / base;
+            hue = hue + v * (n % base);
+            n = parseInt(n / base);
         }
         return hue;
     };
